@@ -26,7 +26,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         let code = gen_code(5);
         println!("тест {code}");
 
-        let response = client.get(&format!("https://dropmefiles.com/{}", code)) // если писать https://dropmefiles.com/AxO19 то выводит + а если писать главную страницу то -
+        let response = client.get(&format!("https://dropmefiles.com/{}", code))
             .send()?;
 
 
